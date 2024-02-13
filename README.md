@@ -1,12 +1,21 @@
-# redis
-An example of how to connect redis cache mechanizm and usefull time coverage option to setting timeout to key 
+Redis-Project
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+This is an example demonstrating how to connect to a Redis caching mechanism and utilize a useful time coverage option to set a timeout for a key.
 
+Redis Installation
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+First and foremost, you can easily install Redis on your local machine using Docker with the following command:
 
-#redis install
-first of all you can easly use docker to redis instalitition to your local machine using;
+docker run --name my-redis -p 6379:6379 -d redis
 
-docker run --name my-redis -p 6379:6379 -d redis  
+Project Overview
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+This is a simple Spring-Boot project which includes:
 
-#This is an simple Spring-Boot project its includes one pojo class "Personel" under domain package, one config class "RedisConfig" under config package which includes RedisTemplate creation. On controller package you can find how implement crud operations using Reids Template. 
+A POJO class “Personnel” under the domain package.
+A configuration class “RedisConfig” under the config package, which includes the creation of RedisTemplate.
+In the controller package, you can find how to implement CRUD operations using Redis Template.
 
-++plus: "redisTemplate.expire(KEY, 50, TimeUnit.MINUTES);" you can set your Key timeout parameter. This is usefull for tokens or session values. 
+Key Timeout Parameter
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+With redisTemplate.expire(KEY, 50, TimeUnit.MINUTES);, you can set a timeout parameter for your Key. This is useful for tokens or session values.
